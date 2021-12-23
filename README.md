@@ -4,6 +4,8 @@ A simple search engine created for Information Recovery And Web Search course fi
 
 This project is aimed to index web documents and then get query from user through web interface, process query, extract documents based on the query and ranking extracted documents and display them to user.
 
+**This project does not include any crawler or bot. Documents should be crawled first and placed in a directory. Then use this project to index them.**
+
 ## Description
 This project is written in python entirely. The Project consists of two major parts:
 * Indexer engine
@@ -22,7 +24,7 @@ Indexer engine is written in pure python and includes these stages:
 Query processor created using Django and provides a web interface for users to enter query and view search result. This module includes:
 1. Get query from user
 2. Fetch postings list from MongoDB based on query
-3. Ranking documents using two methods:
+3. Rank documents using two methods:
     * TF-IDF
     * Positional
 4. Sort documents based on ranking
