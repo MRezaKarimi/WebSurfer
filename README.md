@@ -1,6 +1,6 @@
 # WebSurfer
 ## Introduction
-A simple search engine developed for Information Retrieval And Web Search course final project.
+A simple search engine developed for Information Retrieval And Web Search course at Yazd University.
 
 This project is aimed to index web documents and then get query from user through web interface, process query, extract documents based on the query and ranking extracted documents and display them to user.
 
