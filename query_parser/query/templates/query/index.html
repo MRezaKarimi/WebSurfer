@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Surfe The Web</title>
+  <meta name="description" value="The search engine that doesn't track you. Learn More.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'query/css/jquery-ui.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'query/css/colors.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'query/css/index.css' %}">
+  <link rel="icon" type="image/png" href="./img/se.png">
+  <meta name="author" value="vanGato">
+</head>
+<body>
+  <div class="index">
+    <section class="index__header">
+      <div class="index__logo"></div>
+      <div class="index__search">
+        <form class="index__form" action="search" methode="GET">
+          <div>
+            <input name="q" type="search" placeholder="جستجو"
+                   class="index__query" 
+                   maxlength="512"
+                   autocomplete="off"
+                   title="Search"
+                   aria-label="Search"
+                   dir="rtl"
+                   spellcheck="false"
+                   autofocus="autofocus"
+                   id="search_input"
+                   list="autocomplete"
+            >
+          </div>
+          <datalist id="autocomplete">
+            <option value="Edge">
+          </datalist>
+          <button class="index__button" aria-label="Search" type="submit">
+            <div class="index__ico"></div>
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer class="index__footer">
+      <div class="index__bottom">
+        
+      </div>
+    </footer>
+  </div>
+  <script src="{% static 'query/js/jquery-3.5.1.min.js' %}"></script>
+  {% comment %} <script src="{% static 'query/js/jquery-ui.min.js' %}"></script> {% endcomment %}
+  <script>
+    let words = {{ words|safe }}
+  </script>
+  <script src="{% static 'query/js/autocomplete.js' %}"></script>
+</body>
+</html>
